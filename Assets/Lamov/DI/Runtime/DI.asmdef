@@ -2,7 +2,8 @@
     "name": "DI",
     "rootNamespace": "",
     "references": [
-        "GUID:7cae9d462acad2848969a6a3091c8a80"
+        "GUID:7cae9d462acad2848969a6a3091c8a80",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

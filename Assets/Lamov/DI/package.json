@@ -8,5 +8,8 @@
   "keywords": [ "DI", "dependency injection" ],
   "license": "MIT",
   "category": "DI",
-  "dependencies": { "com.lamov.unityextensions": "https://github.com/DanilLamov/UnityExtensions.git?path=/Assets/Lamov/UnityExtensions" }
+  "dependencies": { 
+    "com.lamov.unityextensions": "https://github.com/DanilLamov/UnityExtensions.git?path=/Assets/Lamov/UnityExtensions",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+  }
 }
