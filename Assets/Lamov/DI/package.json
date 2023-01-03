@@ -1,0 +1,12 @@
+{
+  "name": "com.lamov.di",
+  "displayName": "Dependency Injection",
+  "author": { "name": "Lamov" },
+  "version": "1.0.0",
+  "unity": "2020.3",
+  "description": "Unity dependency injection",
+  "keywords": [ "DI", "dependency injection" ],
+  "license": "MIT",
+  "category": "DI",
+  "dependencies": { "com.lamov.unityextensions": "1.0.0" }
+}
