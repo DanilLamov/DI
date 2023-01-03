@@ -8,5 +8,5 @@
   "keywords": [ "DI", "dependency injection" ],
   "license": "MIT",
   "category": "DI",
-  "dependencies": { "com.lamov.unityextensions": "1.0.0" }
+  "dependencies": { "com.lamov.unityextensions": "https://github.com/DanilLamov/UnityExtensions.git?path=/Assets/Lamov/UnityExtensions" }
 }
