@@ -18,6 +18,23 @@ namespace Lamov.DI.Runtime
             _registered = new Dictionary<Type, BindInfo>();
         }
 
+        #region Bind
+        
+        public BindInfo Bind<TInterface>(TInterface instance)
+        {
+            var bindInfo = new BindInfo(instance, typeof(TInterface));
+            _registered[typeof(TInterface)] = bindInfo;
+
+            return bindInfo;
+        }
+
+        public BindInfo Bind<TInt, TImpl>() where TImpl : class, TInt => Bind<TInt>((TImpl)NewInstance(typeof(TImpl)));
+        
+        public BindInfo Bind<T>() where T : class => Bind<T>((T)NewInstance(typeof(T)));
+        
+        
+        #endregion
+
         #region Resolve
 
         public void ResolveInMethodWithAttribute(Type type) 

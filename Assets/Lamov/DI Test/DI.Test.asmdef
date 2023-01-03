@@ -1,0 +1,18 @@
+{
+    "name": "DI.Test",
+    "rootNamespace": "",
+    "references": [
+        "GUID:650d5878a625f804bb18298a5d8450fa",
+        "GUID:7cae9d462acad2848969a6a3091c8a80",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
