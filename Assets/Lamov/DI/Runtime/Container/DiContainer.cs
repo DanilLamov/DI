@@ -18,6 +18,8 @@ namespace Lamov.DI.Runtime
             _registered = new Dictionary<Type, BindInfo>();
         }
 
+        public void SetParent(DiContainer parentContainer) => Parent = parentContainer;
+
         #region Bind
         
         public BindInfo Bind<TInterface>(TInterface instance)
