@@ -36,7 +36,9 @@ namespace Lamov.DI.Runtime
         #endregion
 
         #region Resolve
-
+        
+        public T Resolve<T>() => (T)Resolve(typeof(T));
+        
         public void ResolveInMethodWithAttribute(Type type) 
         {
             var bindInfos = GetAllValidBindings(this);
