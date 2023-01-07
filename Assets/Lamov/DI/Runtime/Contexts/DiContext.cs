@@ -1,6 +1,6 @@
 ﻿namespace Lamov.DI.Runtime.Contexts
 {
-    public class DiContext<TContext> : Singleton<TContext> where TContext : class, new()
+    public class DiContext<TContext> : Singleton<TContext>, IDiContext where TContext : class, new()
     {
         public DiContainer Container { get; }
         

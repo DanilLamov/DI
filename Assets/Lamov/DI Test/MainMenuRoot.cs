@@ -3,14 +3,9 @@ using Lamov.DI.Runtime.Contexts;
 
 namespace Lamov.DI_Test
 {
-    public class AppRoot : MonoBehaviourDiContext<AppRoot>
+    public class MainMenuRoot : MonoBehaviourDiContext<MainMenuRoot>
     {
         protected override async UniTask Bind()
-        {
-            await BindServices();
-        }
-
-        private async UniTask BindServices()
         {
             
         }
