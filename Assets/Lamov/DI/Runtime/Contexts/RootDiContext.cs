@@ -16,7 +16,7 @@ namespace Lamov.DI.Runtime.Contexts
 
             await Bind();
 
-            _diContext.Container.ResolveInMethodWithAttribute(typeof(TDiContext));
+            Container.ResolveInMethodWithAttribute(typeof(TDiContext));
         }
 
         protected abstract UniTask Bind();
