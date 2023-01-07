@@ -6,7 +6,8 @@ namespace Lamov.DI.Runtime.Contexts
 {
     public abstract class RootDiContext<TDiContext> : MonoBehaviour where TDiContext : DiContext<TDiContext>, new()
     {
-        protected DiContext<TDiContext> _diContext;
+        private DiContext<TDiContext> _diContext;
+        protected DiContainer Container => _diContext.Container;
         
         private async UniTaskVoid Awake()
         {

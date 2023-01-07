@@ -8,17 +8,17 @@ namespace Lamov.DI.Runtime
 {
     public class DiContainer
     {
-        public DiContainer Parent { get; private set; }
+        private DiContainer _parent;
         
         private readonly Dictionary<Type, BindInfo> _registered;
         
         public DiContainer(DiContainer parent = null)
         {
-            Parent = parent;
+            _parent = parent;
             _registered = new Dictionary<Type, BindInfo>();
         }
 
-        public void SetParent(DiContainer parentContainer) => Parent = parentContainer;
+        public void SetParent(DiContainer parentContainer) => _parent = parentContainer;
 
         #region Bind
         
@@ -77,7 +77,7 @@ namespace Lamov.DI.Runtime
                 bindings.Add(bindInfo);
             }
             
-            if (container.Parent != null) bindings.AddRange(GetAllValidBindings(container.Parent));
+            if (container._parent != null) bindings.AddRange(GetAllValidBindings(container._parent));
             
             return bindings;
         }
@@ -86,10 +86,10 @@ namespace Lamov.DI.Runtime
         {
             if (!_registered.TryGetValue(type, out var bindInfo)) 
             {
-                if (Parent == null)
+                if (_parent == null)
                     throw new Exception($"Can't resolve. Object of type '{type.Name}' hasn't registered");
 
-                return Parent.Resolve(type);
+                return _parent.Resolve(type);
             }
 
             if (bindInfo == null) throw new NullReferenceException($"Can't resolve. Object of type '{type.Name}' is null");

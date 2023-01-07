@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using Lamov.DI.Runtime.Contexts;
 
 namespace Lamov.DI_Test
