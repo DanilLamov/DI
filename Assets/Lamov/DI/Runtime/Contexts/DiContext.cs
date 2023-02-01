@@ -13,7 +13,7 @@ namespace Lamov.DI.Runtime.Contexts
         
         public T Instantiate<T>(T original, Transform parent) where T : Object
         {
-            var instance = Instantiate(original, parent);
+            var instance = Object.Instantiate(original, parent);
             Container.Bind(instance);
             Container.ResolveInMethodWithAttribute(typeof(TContext));
             return instance;
