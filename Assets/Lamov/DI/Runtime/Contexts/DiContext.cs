@@ -18,5 +18,11 @@ namespace Lamov.DI.Runtime.Contexts
             Container.ResolveInMethodWithAttribute(typeof(TContext));
             return instance;
         }
+
+        public void Bind<T>(T t)
+        {
+            Container.Bind(t);
+            Container.ResolveInMethodWithAttribute(typeof(TContext));
+        }
     }
 }
