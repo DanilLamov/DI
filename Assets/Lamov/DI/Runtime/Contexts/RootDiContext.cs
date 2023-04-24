@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Lamov.DI.Runtime.Contexts
 {
+    [DefaultExecutionOrder(-5000)]
     public abstract class RootDiContext<TDiContext> : MonoBehaviour where TDiContext : DiContext<TDiContext>, new()
     {
         private DiContext<TDiContext> _diContext;
